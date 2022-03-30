@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --title-family: "Lobster", cursive;
+  --content-text: "Poppins", sans-serif;
+  --bg-color: #0c0b09;
+  --light-bg-color: #1a1814;
+  --gold: #cda45e;
+  --white: #fff;
+  --icon-bg: #28251f;
+  --title-font-size: 28px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--content-text);
+}
