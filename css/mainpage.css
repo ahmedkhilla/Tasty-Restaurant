@@ -135,14 +135,14 @@ header nav i {
 }
 /*! About Us Section  */
 .about-us {
-  background-color: var(--light-bg-color);
+  background-color: var(--bg-color);
   height: 54vh;
 }
 .about-us h2 {
   color: var(--title-color);
   font-size: var(--title-font-size);
   text-align: center;
-  padding: 16px 0px;
+  padding: 24px 0px 16px 0px;
 }
 .about-container {
   background-color: rgba(54, 51, 44, 1);
@@ -169,9 +169,175 @@ header nav i {
   width: 80%;
   margin: 0 auto;
   padding: 8px 0px;
-  /* padding: 0px 24px 16px 24px; */
-  /* padding: 8px 16px 16px 16px; */
 }
+/*! Week specials Section  */
+.week-specials {
+  background-color: #221f1a;
+  height: 32vh;
+  position: relative;
+}
+.week-specials h2 {
+  color: var(--title-color);
+  font-size: var(--title-font-size);
+  text-align: center;
+  padding-top: 28px;
+  margin-bottom: 32px;
+}
+
+.slider {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+}
+.slider-img {
+  width: 75px;
+  height: 75px;
+}
+.slider-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.slider-text {
+  text-align: center;
+  color: var(--white);
+}
+.week-specials a {
+  color: var(--white);
+  font-size: 24px;
+  position: absolute;
+  top: 124px;
+}
+.slider-subtitle {
+  font-size: 14px;
+  color: #ffffff9e;
+  margin-top: 2px;
+}
+.before-icon {
+  left: 55px;
+}
+.after-icon {
+  right: 55px;
+}
+/*! Opening Hours Section  */
+.opening-section {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  animation: zoonInOut 20s ease infinite;
+  border-bottom: 1px solid var(--gold);
+  position: relative;
+}
+.opening-img {
+  width: 100%;
+  height: 500px;
+}
+.opening-section:hover .opening-img {
+  transform: scale(1.1, 1.1);
+}
+.opening-overlay {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+  position: absolute;
+  top: 0;
+}
+.opening-heading {
+  color: var(--title-color);
+  font-size: var(--title-font-size);
+  padding-top: 48px;
+  margin-bottom: 8px;
+}
+.opening-subtitle {
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.line-wrapper {
+  height: 30px;
+  width: 160px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.line {
+  width: 50px;
+  height: 1px;
+  background-color: #c59d5f;
+}
+.inbetween-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #c59d5f;
+  align-self: flex-end;
+}
+.opening-days {
+  font-size: 22px;
+  color: #c59d5f;
+  margin-bottom: 8px;
+}
+.time {
+  font-size: 22px;
+  font-weight: 500;
+}
+.opening-time {
+  margin-bottom: 4px;
+}
+.closing-time {
+  margin-bottom: 18px;
+}
+/*! Why Us Section  */
+.why-us {
+  width: 100%;
+  height: 700px;
+  background: var(--bg-color);
+  color: #fff;
+}
+.why-us h2 {
+  color: var(--title-color);
+  width: 60%;
+  margin: 0 auto 36px auto;
+  text-align: center;
+  padding-top: 48px;
+}
+.whyUs-container {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.whyUs-card {
+  width: 50%;
+  height: 150px;
+  background-color: var(--light-bg-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--title-color);
+}
+.whyUs-container i {
+  margin-top: 8px;
+  font-size: 28px;
+  color: var(--title-color);
+}
+.whyUs-container p {
+  font-size: 22px;
+}
+
 /*! Media Query Tablet */
 @media (min-width: 426px) and (max-width: 768px) {
   .home-page h2 {
@@ -211,6 +377,30 @@ header nav i {
     text-align: left;
     padding-right: 32px;
     flex-basis: 66%;
+  }
+  .slider {
+    gap: 12%;
+  }
+  .slider-title {
+    font-size: 18px;
+  }
+  .slider-subtitle {
+    font-size: 16px;
+  }
+  .week-specials a {
+    font-size: 28px;
+  }
+  .before-icon {
+    left: 150px;
+  }
+  .after-icon {
+    right: 150px;
+  }
+  .opening-days {
+    font-size: 24px;
+  }
+  .time {
+    font-size: 24px;
   }
 }
 /*! Media Query Desktop */
@@ -255,6 +445,7 @@ header nav i {
   }
   .about-us h2 {
     padding: 32px 0;
+    font-size: 32px;
   }
   .about-container {
     height: 65%;
@@ -274,5 +465,72 @@ header nav i {
     padding-right: 32px;
     flex-basis: 66%;
     font-size: 18px;
+  }
+  .week-specials {
+    height: 40vh;
+  }
+  .week-specials h2 {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+  .slider-img {
+    width: 100px;
+    height: 100px;
+  }
+  .slider-title {
+    font-size: 22px;
+  }
+  .slider-subtitle {
+    font-size: 18px;
+  }
+  .week-specials a {
+    top: 150px;
+    font-size: 32px;
+  }
+  .after-icon {
+    right: 250px;
+  }
+  .before-icon {
+    left: 250px;
+  }
+  .opening-img {
+    height: 470px;
+  }
+  .opening-overlay {
+    height: 470px;
+  }
+  .opening-heading {
+    font-size: 32px;
+  }
+  .opening-subtitle {
+    font-size: 22px;
+  }
+  .opening-times {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .line-wrapper {
+    margin-bottom: 40px;
+  }
+  .opening-days {
+    font-size: 28px;
+  }
+  .time {
+    font-size: 28px;
+  }
+  .why-us {
+    height: 600px;
+  }
+  .why-us h2 {
+    font-size: 32px;
+  }
+  .whyUs-card {
+    width: 30%;
+  }
+  .whyUs-container {
+    height: 370px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
